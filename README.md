@@ -1,0 +1,22 @@
+##使用MP的步骤：
+####1、新建一个SpringBoot工程
+####2、指定maven的MP坐标
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.4.1</version>
+        </dependency>
+####3、指定数据库驱动
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+####4、创建实体类
+######1）定义属性
+######2）指定主键类型
+####5、创建Dao接口，需要继承BaseMapper<实体.class>
+####6、主启动类上加入@MapperScan(value="指定mapper接口的包名)
+####7、测试使用：
+######1）注入mapper对象
+######2）调用方法，完成CRUD
