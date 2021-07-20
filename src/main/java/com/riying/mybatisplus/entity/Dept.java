@@ -12,10 +12,10 @@ import lombok.Data;
  * Model中提供了对数据库的CRUD的操作
  */
 @Data
-public class Dept extends Model  {
+public class Dept extends Model<Dept>  {
 //    定义属性，属性名和表的列明一样
-    @TableId(value = "id",type = IdType.AUTO)
-    private Integer id;
+    @TableId(value = "id",type = IdType.ID_WORKER_STR)
+    private Long id;
     private String name;
     private String  mobile;
     private Integer manager;

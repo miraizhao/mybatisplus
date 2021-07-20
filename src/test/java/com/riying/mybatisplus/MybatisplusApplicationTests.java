@@ -223,6 +223,14 @@ class MybatisplusApplicationTests {
      * 方法selectbumap()
      * 参数 Map(String,Object)
      * 返回值： List<T>
+     *
+     *
+     *     ==>  Preparing: SELECT id,name,email,age FROM user WHERE name = ? AND age = ?
+     * ==> Parameters: 张三(String), 20(Integer)
+     * <==    Columns: id, name, email, age
+     * <==        Row: 7, 张三, zhangsan@qq.com, 20
+     * <==        Row: 8, 张三, zhangsan@qq.com, 20
+     * <==      Total: 2
      */
     @Test
     public void testSelectByMap(){
